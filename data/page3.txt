@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Web Development Foundations</title>
+</head>
+<body>
+
+<h1>Web Development</h1>
+<hr>
+
+<h2>Front-End Development</h2>
+<p>
+Front-end development focuses on building interactive user interfaces using technologies like <strong>HTML</strong>, 
+<strong>CSS</strong>, and <strong>JavaScript</strong>. 
+Modern frameworks such as React and Angular help developers build dynamic, responsive experiences.
+</p>
+
+<h2>Back-End Development</h2>
+<p>
+Back-end development handles server logic, routing, authentication, and database interactions.
+Popular back-end frameworks include Node.js, Django, Flask, and Spring Boot.
+Scalable applications use REST APIs or GraphQL for structured data communication.
+</p>
+
+<p>
+To learn how web applications store data efficiently, continue to 
+<a href="page4.txt">our DBMS page</a>.
+</p>
+
+</body>
+</html>

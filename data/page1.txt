@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Artificial Intelligence and Machine Learning</title>
+</head>
+<body>
+
+<h1>Artificial Intelligence and Machine Learning</h1>
+<hr>
+
+<h2>What is AI?</h2>
+<p>
+Artificial Intelligence (<strong>AI</strong>) focuses on building systems capable of performing tasks that normally require human intelligence. 
+These tasks include reasoning, perception, language understanding, and decision-making.
+AI systems are transforming industries such as healthcare, finance, transportation, and customer service.
+</p>
+
+<h2>What is Machine Learning?</h2>
+<p>
+Machine Learning (<em>ML</em>) is a subset of AI that uses statistical techniques to enable models to learn patterns from data.
+Common ML techniques include:
+<ul>
+    <li>Supervised Learning</li>
+    <li>Unsupervised Learning</li>
+    <li>Reinforcement Learning</li>
+</ul>
+Popular algorithms include neural networks, support vector machines, and decision trees.
+</p>
+
+<p>
+To see how AI is applied in real software systems, continue to 
+<a href="page2.txt"><strong>Software Engineering</strong></a>.
+</p>
+
+</body>
+</html>

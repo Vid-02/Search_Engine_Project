@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Software Engineering Principles</title>
+</head>
+<body>
+
+<h1>Software Engineering</h1>
+<hr>
+
+<h2>Overview</h2>
+<p>
+Software Engineering is the disciplined approach to the design, development, testing, and maintenance of software applications.
+Engineers follow principles like <strong>modularity</strong>, <strong>abstraction</strong>, and <strong>separation of concerns</strong> 
+to ensure software remains scalable and maintainable.
+</p>
+
+<h2>Modern Practices</h2>
+<p>
+Contemporary engineering teams follow practices such as:
+<ul>
+    <li>Agile Development</li>
+    <li>Continuous Integration and Deployment (CI/CD)</li>
+    <li>Test-Driven Development</li>
+    <li>Cloud-Native Architecture</li>
+</ul>
+These techniques help teams collaborate effectively and ship reliable software.
+</p>
+
+<p>
+To understand how these ideas connect to the web, visit our 
+<a href="page3.txt">Web Development</a> page.
+</p>
+
+</body>
+</html>

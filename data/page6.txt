@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Augmented and Virtual Reality</title>
+</head>
+<body>
+
+<h1>Augmented and Virtual Reality</h1>
+<hr>
+
+<h2>Understanding AR & VR</h2>
+<p>
+Augmented Reality (AR) enhances real-world environments with digital elements, while Virtual Reality (VR) 
+creates fully immersive digital experiences. These systems rely on 3D modeling, motion tracking, and 
+real-time rendering.
+</p>
+
+<h2>Applications</h2>
+<p>
+AR and VR are widely used in gaming, training simulations, healthcare, architecture, and education.
+Challenges include reducing latency, improving realism, and designing intuitive user interfaces.
+</p>
+
+<p>
+Return to our introduction by visiting 
+<a href="page1.txt">Artificial Intelligence and Machine Learning</a>.
+</p>
+
+</body>
+</html>

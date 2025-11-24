@@ -1,0 +1,603 @@
+========================================
+SEARCH ENGINE PROJECT – SAMPLE RUNS
+========================================
+Below is a complete set of sample queries executed on the
+simplified search engine implementation. These demonstrate:
+
+- AND-based ranked search (required behavior)
+- Stop-word removal
+- Case normalization
+- Punctuation handling
+- Missing-term behavior
+- Multi-term AND failures
+- High-frequency ranking
+- Prefix search using Trie (optional enhancement)
+- Partial-term fallback using Trie (optional enhancement)
+
+This output matches the exact console behavior of:
+    python3 src/main.py
+
+
+========================================
+BOUNDARY CONDITION COVERAGE
+========================================
+
+1. Missing Terms:
+   system
+   machine quantum
+   learning biology
+   neural calculus
+   ai blockchain
+   deep learning
+   analysis
+
+2. Missing Multi-Term (AND Failure):
+   machine system
+   models pipeline
+   models pipelin
+   data pipelin
+   learning deep
+   system data learning example
+   machine learning models example
+   data and science in pipeline
+
+3. Case Sensitivity:
+   MACHINE
+   DaTa ScIeNCE
+   AI MODELS
+
+4. Punctuation Handling:
+   machine,
+   deep-learning
+   system!!!
+   ai!!!
+   AI, ML; data?
+   data-science
+   state-of-the-art
+
+5. Stopword-Heavy Queries:
+   the machine and system in learning
+   what is the data for
+   learning and the models
+   this is the deep learning
+
+6. Repeated Terms (Frequency Ranking):
+   data data data
+   learning learning
+   models models models
+   machine machine learning
+
+7. Prefix Queries (Trie):
+   prefix ma
+   prefix lear
+   prefix neu
+   prefix dat
+   prefix sci
+   prefix q
+
+8. No Fallback Match:
+   ma
+   models pipelin
+   data pipelin
+
+9. Successful Fallback Matching:
+   machin  → machine
+   system  → systems
+
+10. AND Search + Fallback Combined:
+   learning system
+   ai model
+
+
+========================================
+INDEX BUILD OUTPUT
+========================================
+Building search index...
+Index successfully built.
+Total unique Trie terms: 232
+
+Search Engine Ready.
+Type a query OR:
+  prefix <text>   → Trie prefix search (optional)
+  exit            → quit the program
+
+
+========================================
+QUERY: machine
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 4
+- page6.txt | Augmented and Virtual Reality | Score = 1
+
+========================================
+QUERY: learning
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 7
+- page6.txt | Augmented and Virtual Reality | Score = 1
+
+========================================
+QUERY: data
+========================================
+Search Results:
+- page5.txt | Data Science Overview | Score = 8
+- page4.txt | Database Management Systems | Score = 4
+- page3.txt | Web Development Foundations | Score = 2
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 1
+
+========================================
+QUERY: system
+========================================
+No matching documents found.
+
+========================================
+QUERY: ai
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 5
+
+========================================
+QUERY: models
+========================================
+Search Results:
+- page4.txt | Database Management Systems | Score = 1
+- page5.txt | Data Science Overview | Score = 1
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 1
+
+========================================
+QUERY: machine learning
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 11
+- page6.txt | Augmented and Virtual Reality | Score = 2
+
+========================================
+QUERY: neural network
+========================================
+No matching documents found.
+
+========================================
+QUERY: data science
+========================================
+Search Results:
+- page5.txt | Data Science Overview | Score = 11
+- page4.txt | Database Management Systems | Score = 5
+- page3.txt | Web Development Foundations | Score = 2
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 1
+
+========================================
+QUERY: deep learning
+========================================
+No matching documents found.
+
+========================================
+QUERY: learning models
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 8
+- page6.txt | Augmented and Virtual Reality | Score = 1
+- page4.txt | Database Management Systems | Score = 1
+- page5.txt | Data Science Overview | Score = 1
+
+========================================
+QUERY: machine system
+========================================
+No matching documents found.
+
+========================================
+QUERY: machine quantum
+========================================
+No matching documents found.
+
+========================================
+QUERY: learning biology
+========================================
+No matching documents found.
+
+========================================
+QUERY: neural calculus
+========================================
+No matching documents found.
+
+========================================
+QUERY: ai blockchain
+========================================
+No matching documents found.
+
+========================================
+QUERY: science python
+========================================
+Search Results:
+- page5.txt | Data Science Overview | Score = 4
+- page4.txt | Database Management Systems | Score = 1
+
+========================================
+QUERY: the machine and system in learning
+========================================
+No matching documents found.
+
+========================================
+QUERY: what is the data for
+========================================
+Search Results:
+- page5.txt | Data Science Overview | Score = 8
+- page4.txt | Database Management Systems | Score = 4
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 3
+- page3.txt | Web Development Foundations | Score = 2
+
+========================================
+QUERY: ai in the modern world
+========================================
+No matching documents found.
+
+========================================
+QUERY: learning and the models
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 8
+- page6.txt | Augmented and Virtual Reality | Score = 1
+- page4.txt | Database Management Systems | Score = 1
+- page5.txt | Data Science Overview | Score = 1
+
+========================================
+QUERY: this is the deep learning
+========================================
+No matching documents found.
+
+========================================
+QUERY: machine,
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 4
+- page6.txt | Augmented and Virtual Reality | Score = 1
+
+========================================
+QUERY: deep-learning
+========================================
+No matching documents found.
+
+========================================
+QUERY: AI, ML; data?
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 8
+- page5.txt | Data Science Overview | Score = 8
+- page4.txt | Database Management Systems | Score = 4
+- page3.txt | Web Development Foundations | Score = 2
+
+========================================
+QUERY: system!!!
+========================================
+No matching documents found.
+
+========================================
+QUERY: ai!!!
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 5
+
+========================================
+QUERY: data-science
+========================================
+No matching documents found.
+
+========================================
+QUERY: state-of-the-art
+========================================
+No matching documents found.
+
+========================================
+QUERY: MACHINE
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 4
+- page6.txt | Augmented and Virtual Reality | Score = 1
+
+========================================
+QUERY: DaTa ScIeNCE
+========================================
+Search Results:
+- page5.txt | Data Science Overview | Score = 11
+- page4.txt | Database Management Systems | Score = 5
+- page3.txt | Web Development Foundations | Score = 2
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 1
+
+========================================
+QUERY: AI MODELS
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 6
+- page4.txt | Database Management Systems | Score = 1
+- page5.txt | Data Science Overview | Score = 1
+
+========================================
+QUERY: RUNNING
+========================================
+No matching documents found.
+
+========================================
+QUERY: data data data
+========================================
+Search Results:
+- page5.txt | Data Science Overview | Score = 24
+- page4.txt | Database Management Systems | Score = 12
+- page3.txt | Web Development Foundations | Score = 6
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 3
+
+========================================
+QUERY: learning learning
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 14
+- page6.txt | Augmented and Virtual Reality | Score = 2
+
+========================================
+QUERY: machine machine learning
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 15
+- page6.txt | Augmented and Virtual Reality | Score = 3
+
+========================================
+QUERY: models models models
+========================================
+Search Results:
+- page4.txt | Database Management Systems | Score = 3
+- page5.txt | Data Science Overview | Score = 3
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 3
+
+========================================
+QUERY: ma
+========================================
+No matching documents found.
+
+========================================
+QUERY: prefix ma
+========================================
+Trie Prefix Matches:
+- machine
+- machines
+- management
+- matplotlib
+- maintenance
+- maintainable
+
+========================================
+QUERY: prefix lear
+========================================
+Trie Prefix Matches:
+- learn
+- learning
+
+========================================
+QUERY: prefix neu
+========================================
+Trie Prefix Matches:
+- neural
+
+========================================
+QUERY: prefix dat
+========================================
+Trie Prefix Matches:
+- data
+- database
+- databases
+- datasets
+
+========================================
+QUERY: prefix sci
+========================================
+Trie Prefix Matches:
+- science
+- scientists
+- scikitlearn
+
+========================================
+QUERY: prefix q
+========================================
+No terms found with that prefix.
+
+========================================
+QUERY: nested
+========================================
+No matching documents found.
+
+========================================
+QUERY: inside
+========================================
+No matching documents found.
+
+========================================
+QUERY: content
+========================================
+No matching documents found.
+
+========================================
+QUERY: broken
+========================================
+No matching documents found.
+
+========================================
+QUERY: heading
+========================================
+No matching documents found.
+
+========================================
+QUERY: paragraph
+========================================
+No matching documents found.
+
+========================================
+QUERY: data
+========================================
+Search Results:
+- page5.txt | Data Science Overview | Score = 8
+- page4.txt | Database Management Systems | Score = 4
+- page3.txt | Web Development Foundations | Score = 2
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 1
+
+========================================
+QUERY: machine
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 4
+- page6.txt | Augmented and Virtual Reality | Score = 1
+
+========================================
+QUERY: learning system
+========================================
+No matching documents found.
+
+========================================
+QUERY: models pipeline
+========================================
+No matching documents found.
+
+========================================
+QUERY: analysis
+========================================
+No matching documents found.
+
+========================================
+QUERY: machine learning system
+========================================
+No matching documents found.
+
+========================================
+QUERY: learning deep
+========================================
+No matching documents found.
+
+========================================
+QUERY: models system pipeline
+========================================
+No matching documents found.
+
+========================================
+QUERY: deep learning system models
+========================================
+No matching documents found.
+
+========================================
+QUERY: the ai in machine learning
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 16
+- page6.txt | Augmented and Virtual Reality | Score = 2
+
+========================================
+QUERY: data and science in pipeline
+========================================
+No matching documents found.
+
+========================================
+QUERY: machine learning models example
+========================================
+No matching documents found.
+
+========================================
+QUERY: system data learning example
+========================================
+No matching documents found.
+
+========================================
+QUERY: ai system deep model
+========================================
+No matching documents found.
+
+========================================
+QUERY: systems
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 3
+- page4.txt | Database Management Systems | Score = 2
+- page6.txt | Augmented and Virtual Reality | Score = 1
+
+========================================
+QUERY: machin
+========================================
+No matching documents found.
+
+========================================
+QUERY: system
+========================================
+No matching documents found.
+
+========================================
+QUERY: exit
+========================================
+Exiting search engine.
+
+========================================
+SECOND RUN
+========================================
+Building search index...
+Index successfully built.
+Total unique Trie terms: 232
+
+Search Engine Ready.
+Type a query OR:
+  prefix <text>   → Trie prefix search (optional)
+  exit            → quit the program
+
+========================================
+QUERY: machin
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 4
+- page6.txt | Augmented and Virtual Reality | Score = 1
+
+========================================
+QUERY: system
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 3
+- page4.txt | Database Management Systems | Score = 2
+- page6.txt | Augmented and Virtual Reality | Score = 1
+
+========================================
+QUERY: ai model
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 5
+- page6.txt | Augmented and Virtual Reality | Score = 1
+- page5.txt | Data Science Overview | Score = 1
+
+========================================
+QUERY: models pipeline
+========================================
+No matching documents found.
+
+========================================
+QUERY: models pipelin
+========================================
+No matching documents found.
+
+========================================
+QUERY: data pipelin
+========================================
+No matching documents found.
+
+========================================
+QUERY: learning system
+========================================
+Search Results:
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 10
+- page6.txt | Augmented and Virtual Reality | Score = 2
+- page4.txt | Database Management Systems | Score = 2
+
+========================================
+QUERY: neural network
+========================================
+Search Results:
+- page5.txt | Data Science Overview | Score = 2
+- page1.txt | Artificial Intelligence and Machine Learning | Score = 2
+
+========================================
+QUERY: exit
+========================================
+Exiting search engine.
+
+========================================
+END OF SAMPLE RUNS
+========================================

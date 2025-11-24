@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Data Science Overview</title>
+</head>
+<body>
+
+<h1>Data Science</h1>
+<hr>
+
+<h2>Introduction</h2>
+<p>
+Data Science combines programming, statistics, and domain expertise to extract meaningful insights from data.
+Popular tools include Python, NumPy, Pandas, Matplotlib, and Scikit-Learn.
+</p>
+
+<h2>Common Techniques</h2>
+<p>
+Data scientists work with:
+<ul>
+    <li>Data Cleaning</li>
+    <li>Feature Engineering</li>
+    <li>Predictive Modeling</li>
+    <li>Data Visualization</li>
+</ul>
+Models such as regression, clustering, and neural networks help uncover patterns in large datasets.
+</p>
+
+<p>
+To explore immersive technologies that rely on real-time data, continue to 
+<a href="page6.txt">our AR/VR page</a>.
+</p>
+
+</body>
+</html>

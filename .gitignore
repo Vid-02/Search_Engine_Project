@@ -1,0 +1,36 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# VS Code settings
+.vscode/
+
+# macOS files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
+
+# Test temporary directory files
+tmp/
+temp/
+*.temp
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
+
+# Jupyter checkpoints (if used)
+.ipynb_checkpoints/
+
+# Output folder — keep results but ignore large temp files
+output/*.log
+output/*.tmp

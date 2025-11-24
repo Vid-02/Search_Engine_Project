@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Database Management Systems</title>
+</head>
+<body>
+
+<h1>Database Management Systems (DBMS)</h1>
+<hr>
+
+<h2>Relational Databases</h2>
+<p>
+Relational databases like MySQL and PostgreSQL organize data into structured tables using <strong>SQL</strong>. 
+They support joins, indexes, and strong consistency with ACID properties.
+</p>
+
+<h2>NoSQL Databases</h2>
+<p>
+NoSQL databases such as MongoDB and Cassandra offer flexible data models. 
+They are ideal for large-scale, distributed applications that require horizontal scaling.
+</p>
+
+<p>
+To explore how data transforms into insights, visit 
+<a href="page5.txt">our Data Science page</a>.
+</p>
+
+</body>
+</html>
