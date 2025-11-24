@@ -71,7 +71,7 @@ Purpose:
 
 -----------------------------
 
-## 5. Trie Construction (Optional Feature)
+## 5. Trie Construction 
 
 The Trie stores all unique terms for prefix-based queries.
 

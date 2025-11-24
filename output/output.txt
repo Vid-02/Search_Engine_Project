@@ -81,8 +81,8 @@ BOUNDARY CONDITION COVERAGE
    data pipelin
 
 9. Successful Fallback Matching:
-   machin  → machine
-   system  → systems
+   machin  -> machine
+   system  -> systems
 
 10. AND Search + Fallback Combined:
    learning system
@@ -98,8 +98,8 @@ Total unique Trie terms: 232
 
 Search Engine Ready.
 Type a query OR:
-  prefix <text>   → Trie prefix search (optional)
-  exit            → quit the program
+  prefix <text>   -> Trie prefix search (optional)
+  exit            -> quit the program
 
 
 ========================================
